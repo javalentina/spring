@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsersDAO {
-    public List<User> getUsers(){
-        List<User> list = new ArrayList<>(
+    public static List<User> getUsers(){
+        List<User> userList = new ArrayList<>(
                 List.of(
                         new User(11,"Jack","Berlin"),
                         new User(22,"Nick","Paris"),
@@ -15,6 +15,6 @@ public class UsersDAO {
                         new User(44,"Ted","Oslo")
                 )
         );
-        return list;
+        return userList;
     }
 }
