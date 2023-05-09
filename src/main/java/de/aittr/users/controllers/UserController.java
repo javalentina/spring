@@ -45,7 +45,7 @@ public class UserController{
     @GetMapping(value="/users/{id}")
     public String UserById(@PathVariable int id, Model model){
 
-        User user = users.stream().filter(u -> u.getId()==id).findFirst().orElse(null);
+        User user = users.stream().filter(u -> u.getId() == id).findFirst().orElse(null);
         model.addAttribute("user", user);
         return "user-info";
     }

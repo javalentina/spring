@@ -12,9 +12,9 @@
 <table>
     <tr th:each="orders: ${orders}">
 
-        <td th:text = "${orders.orderID}"></td>
-        <td th:text = "${orders.user.name}"></td>
-        <td th:text = "${orders.title}"></td>
+        <td th:text="${orders.orderID}"></td>
+        <td th:text="${orders.user.name}"></td>
+        <td th:text="${orders.title}"></td>
 
     </tr>
 </table>
