@@ -26,10 +26,21 @@ public class UserController {
         return "users";
     }
 
-    @GetMapping(value="/users/{id}")
+    /*Class work*/
+   /* @GetMapping(value="/users/{id}")
     public String UserById(@PathVariable int id, Model model){
         List<User> res=new ArrayList<>();
         res.add(users.get(id));
+        model.addAttribute("users", res);
+        model.addAttribute("user_id", id);
+        return "user-info";
+    }*/
+
+    /*User ID*/
+    @GetMapping(value="/users/{id}")
+    public String UserById(@PathVariable int id, Model model){
+        List<User> res=new ArrayList<>();
+        res=users.stream().filter(user -> user.getId()==id).toList();
         model.addAttribute("users", res);
         model.addAttribute("user_id", id);
         return "user-info";

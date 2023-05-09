@@ -13,6 +13,7 @@
 <tr th:each="user: ${users}">
     <th th:text="${userStat.index}"></th>
     <th th:text="${userStat.count}"></th>
+    <td th:text = "${user.id}"></td>
     <td th:text = "${user.name}"></td>
     <td th:text = "${user.city}"></td>
 </tr>

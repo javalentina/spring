@@ -9,10 +9,10 @@ public class UsersDAO {
     public List<User> getUsers(){
         List<User> list = new ArrayList<>(
                 List.of(
-                        new User("Jack","Berlin"),
-                        new User("Nick","Paris"),
-                        new User("Lena","Berlin"),
-                        new User("Ted","Oslo")
+                        new User(11,"Jack","Berlin"),
+                        new User(22,"Nick","Paris"),
+                        new User(33,"Lena","Berlin"),
+                        new User(44,"Ted","Oslo")
                 )
         );
         return list;

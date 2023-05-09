@@ -11,6 +11,7 @@
 <h1 th:text="'User #' + ${user_id}">Hello Users </h1>
 <table>
 <tr th:each="user: ${users}">
+    <td th:text = "${user.id}"></td>
     <td th:text = "${user.name}"></td>
     <td th:text = "${user.city}"></td>
 </tr>
