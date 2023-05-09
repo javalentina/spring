@@ -5,15 +5,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Order from one User</title>
 </head>
 <body>
-<h1 th:text="'User #' + ${user.id}"></h1>
+<h1 th:text="'User #' + ${user.name}+ ' id:' + ${user.id}"></h1>
 <table>
-    <tr >
-        <td th:text = "${user.id}"></td>
-        <td th:text = "${user.name}"></td>
-        <td th:text = "${user.city}"></td>
+    <tr th:each="order: ${orders}">
+        <td th:text = "${order.getOrderID()}"></td>
+        <td th:text = "${order.getTitle()}"></td>
     </tr>
 </table>
 </body>

@@ -13,9 +13,10 @@ public class OrdersDAO {
         List<Order> orderList = new ArrayList<>(
                 List.of(
                         new Order(100,userList.get(0),"Title one"),
-                        new Order(200,userList.get(1),"Title two"),
+                        new Order(200,userList.get(0),"Title two"),
                         new Order(300,userList.get(2),"Title three"),
-                        new Order(400,userList.get(3),"title four")
+                        new Order(400,userList.get(3),"title four"),
+                        new Order(500,userList.get(1),"title four")
                 )
         );
         return orderList;
